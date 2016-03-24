@@ -11,10 +11,13 @@ namespace LINQ2XML
 
         static void Main()
         {
-            
-            AddFivePersons();
-            AddFivePersons();
-            ReadData();
+            XDocument x = XDocument.Load(@"data.xml");
+            Person p = new Person("Updated Alex", "0731548987", "florin.patruta@outlook.com");
+            Update(x, p);
+
+            //AddFivePersons();
+            //AddFivePersons();
+            //ReadData();
             //SaveData();
         }
         /// <summary>
@@ -72,11 +75,11 @@ namespace LINQ2XML
             {
                 xDoc.Element("Agenda").Add
                     (
-                    new XElement("Entry", new XAttribute("ID", person.ID.ToString())),    
+                    new XElement("Entry", new XAttribute("ID", person.ID.ToString()),    
                         new XElement("Name", person.Name),
                         new XElement("Telephone", person.Telephone),
                         new XElement("Email", person.Email)
-                    );
+                    ));
                 xDoc.Save(@"updated.xml");
             }
             catch (System.Exception ex)
