@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--XML Created using System.Xml.Linq namespace-->
+<Agenda>
+  <Entry ID="0">
+    <Name>Alex</Name>
+    <Telephone>0745896321</Telephone>
+    <Email>alex@patruta.xyz</Email>
+  </Entry>
+  <Entry ID="1">
+    <Name>Diana</Name>
+    <Telephone>0789456325</Telephone>
+    <Email>diana@patruta.xyz</Email>
+  </Entry>
+  <Entry ID="2">
+    <Name>0765892759</Name>
+    <Telephone>niculaie@patruta.xyz</Telephone>
+    <Email />
+  </Entry>
+  <Entry ID="3">
+    <Name>Daniel</Name>
+    <Telephone>0773895621</Telephone>
+    <Email>daniel@patruta.xyz</Email>
+  </Entry>
+  <Entry ID="4">
+    <Name>Sorin</Name>
+    <Telephone>0721458791</Telephone>
+    <Email>sorin@patruta.xyz</Email>
+  </Entry>
+  <Entry ID="5">
+    <Name>Alex</Name>
+    <Telephone>0745896321</Telephone>
+    <Email>alex@patruta.xyz</Email>
+  </Entry>
+  <Entry ID="6">
+    <Name>Diana</Name>
+    <Telephone>0789456325</Telephone>
+    <Email>diana@patruta.xyz</Email>
+  </Entry>
+  <Entry ID="7">
+    <Name>0765892759</Name>
+    <Telephone>niculaie@patruta.xyz</Telephone>
+    <Email />
+  </Entry>
+  <Entry ID="8">
+    <Name>Daniel</Name>
+    <Telephone>0773895621</Telephone>
+    <Email>daniel@patruta.xyz</Email>
+  </Entry>
+  <Entry ID="9">
+    <Name>Sorin</Name>
+    <Telephone>0721458791</Telephone>
+    <Email>sorin@patruta.xyz</Email>
+  </Entry>
+</Agenda>
