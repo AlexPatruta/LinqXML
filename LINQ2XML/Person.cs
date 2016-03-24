@@ -22,9 +22,16 @@ namespace LINQ2XML
         /// <param name="name">Type: string</param>
         /// <param name="telephone">Type: string</param>
         /// <param name="email">Type: string</param>
-        public Person(string name, string telephone, string email)
+        public Person(int? id, string name, string telephone, string email)
         {
-            ID = identificationNumber++;
+            if (id == null)
+            {
+                ID = identificationNumber++;
+            }
+            else
+            {
+                ID = (Int32)id;
+            }
             Name = name;
             Telephone = telephone;
             Email = email;

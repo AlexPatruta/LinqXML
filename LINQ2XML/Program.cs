@@ -11,25 +11,30 @@ namespace LINQ2XML
 
         static void Main()
         {
-            XDocument x = XDocument.Load(@"data.xml");
-            Person p = new Person("Updated Alex", "0731548987", "florin.patruta@outlook.com");
-            Update(x, p);
+            //XDocument x = XDocument.Load(@"data.xml");
+            //Person p = new Person("Updated Alex", "0731548987", "florin.patruta@outlook.com");
+            //Update(x, p);
 
             //AddFivePersons();
             //AddFivePersons();
             //ReadData();
             //SaveData();
+
+            Person one = new Person(null, "Alex", "0745687789", "asdasdas@asdfsdv.com");
+            Person two = new Person(4, "Daniel", "0746879542", "asdvasjkdnvsd@sadasdas.com");
+            System.Console.WriteLine("ID1: {0}\nID2: {1}", one.ID.ToString(), two.ID.ToString());
+            System.Console.ReadKey();
         }
         /// <summary>
         /// Add five test entries to persons
         /// </summary>
         public static void AddFivePersons()
         {
-            persons.Add(new Person("Alex", "0745896321", "alex@patruta.xyz"));
-            persons.Add(new Person("Diana", "0789456325", "diana@patruta.xyz"));
-            persons.Add(new Person("Marinel", "0765892759", "niculaie@patruta.xyz"));
-            persons.Add(new Person("Daniel", "0773895621", "daniel@patruta.xyz"));
-            persons.Add(new Person("Sorin", "0721458791", "sorin@patruta.xyz"));
+            persons.Add(new Person(null, "Alex", "0745896321", "alex@patruta.xyz"));
+            persons.Add(new Person(null, "Diana", "0789456325", "diana@patruta.xyz"));
+            persons.Add(new Person(null, "Marinel", "0765892759", "niculaie@patruta.xyz"));
+            persons.Add(new Person(null, "Daniel", "0773895621", "daniel@patruta.xyz"));
+            persons.Add(new Person(null, "Sorin", "0721458791", "sorin@patruta.xyz"));
         }
         public static void SaveData()
         {

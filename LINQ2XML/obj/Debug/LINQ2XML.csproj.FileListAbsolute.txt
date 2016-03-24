@@ -14,4 +14,3 @@ C:\Users\user\Curs EBS\LinqXML\LINQ2XML\obj\Debug\LINQ2XML.exe
 C:\Users\user\Curs EBS\LinqXML\LINQ2XML\obj\Debug\LINQ2XML.pdb
 C:\Users\user\Curs EBS\LinqXML\LINQ2XML\bin\Debug\LINQ2XML.exe
 C:\Users\user\Curs EBS\LinqXML\LINQ2XML\bin\Debug\LINQ2XML.pdb
-C:\Users\user\Curs EBS\LinqXML\LINQ2XML\obj\Debug\LINQ2XML.csprojResolveAssemblyReference.cache
