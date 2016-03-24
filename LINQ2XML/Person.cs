@@ -13,7 +13,15 @@ namespace LINQ2XML
         public string Name { get; set; }
         public string Telephone { get; set; }
         public string Email { get; set; }
-
+        /// <summary>
+        /// Constructor which sets ID, Name, Telephone and Email.
+        /// The ID field is set automatically, depending on how 
+        /// many entries there are. It uses a static value
+        /// which is incremented when a new entry is created
+        /// </summary>
+        /// <param name="name">Type: string</param>
+        /// <param name="telephone">Type: string</param>
+        /// <param name="email">Type: string</param>
         public Person(string name, string telephone, string email)
         {
             ID = identificationNumber++;
@@ -21,19 +29,6 @@ namespace LINQ2XML
             Telephone = telephone;
             Email = email;
         }
-        public Person(string name, string telephone)
-        {
-            ID = identificationNumber++; ;
-            Name = name;
-            Telephone = telephone;
-            Email = null;
-        }
-        public Person(string name)
-        {
-            ID = identificationNumber++; ;
-            Name = name;
-            Telephone = null;
-            Email = null;
-        }
+        
     }
 }

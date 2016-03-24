@@ -12,12 +12,15 @@ namespace LINQ2XML
         static void Main()
         {
             
-            AddData();
-            AddData();
+            AddFivePersons();
+            AddFivePersons();
             ReadData();
             //SaveData();
         }
-        public static void AddData()
+        /// <summary>
+        /// Add five test entries to persons
+        /// </summary>
+        public static void AddFivePersons()
         {
             persons.Add(new Person("Alex", "0745896321", "alex@patruta.xyz"));
             persons.Add(new Person("Diana", "0789456325", "diana@patruta.xyz"));
@@ -25,7 +28,6 @@ namespace LINQ2XML
             persons.Add(new Person("Daniel", "0773895621", "daniel@patruta.xyz"));
             persons.Add(new Person("Sorin", "0721458791", "sorin@patruta.xyz"));
         }
-
         public static void SaveData()
         {
             XDocument xmlDocument = new XDocument(
@@ -57,12 +59,29 @@ namespace LINQ2XML
 
             XDocument xml = XDocument.Load("data.xml");
             System.Console.WriteLine(xml.Element("Agenda").ToString());
-            foreach (var element in xml.Elements())
+        }
+        
+        /// <summary>
+        /// Updates an XML document tree with a certain Person type object.
+        /// </summary>
+        /// <param name="xDoc">Type: "XDocument". Loaded document, the one which will be updated, but NOT overwritten</param>
+        /// <param name="person">Type: "Person". The entry to be written in the new, updated XML file</param>
+        public static void Update(XDocument xDoc, Person person)
+        {
+            try
             {
-                if (element.Name == "Name")
-                {
-                    System.Console.WriteLine(element.Value.ToString());
-                }
+                xDoc.Element("Agenda").Add
+                    (
+                    new XElement("Entry", new XAttribute("ID", person.ID.ToString())),    
+                        new XElement("Name", person.Name),
+                        new XElement("Telephone", person.Telephone),
+                        new XElement("Email", person.Email)
+                    );
+                xDoc.Save(@"updated.xml");
+            }
+            catch (System.Exception ex)
+            {
+                System.Console.WriteLine("Failed to update. Got exception: {0}", ex.ToString());
             }
         }
     }
